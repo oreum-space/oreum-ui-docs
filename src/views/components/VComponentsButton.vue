@@ -69,7 +69,7 @@ function process () {
       return
     }
     progress.value = Math.min(1, <number>progress.value + Math.max(Math.random() * 0.25, 0.1))
-  }, 250)
+  }, 500)
 }
 </script>
 

@@ -55,10 +55,14 @@ export default <RouteRecordRaw>{
       component: () => import('@/views/components/VComponentsInputText.vue')
     },
     {
-      path: 'progress',
-      name: name`Progress`,
-      component: () => import('@/views/components/VComponentsProgress.vue')
+      path: 'progress-bar',
+      name: name`ProgressBar`,
+      component: () => import('@/views/components/VComponentsProgressBar.vue')
     },
-    { path: '' }
+    {
+      path: 'progress-circle',
+      name: name`ProgressCircle`,
+      component: () => import('@/views/components/VComponentsProgressCircle.vue')
+    }
   ]
 }

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "oreum-ui": "link:./oreum-ui",
+    "oreum-ui": "link:../oreum-ui",
     "vue": "^3.3.13"
   },
   "devDependencies": {

@@ -3,58 +3,41 @@
     tag="section"
     clear
   >
-    <h1>Progress</h1>
+    <h1>Progress Circle</h1>
 
     <h2>Basic</h2>
     <div class="flex align-center">
-      <o-progress />
-      <o-progress size="medium" />
-      <o-progress size="large" />
-    </div>
-
-    <h2>Indeterminate</h2>
-    <div class="flex align-center">
-      <o-progress indeterminate />
-      <o-progress
-        size="medium"
-        indeterminate
+      <o-progress-circle
+        :show="show"
       />
-      <o-progress
+      <o-progress-circle
+        size="medium"
+        :show="show"
+      />
+      <o-progress-circle
         size="large"
-        indeterminate
+        :show="show"
       />
     </div>
 
     <h2>Progress</h2>
     <div class="flex align-center">
-      <o-progress :progress="range" />
-      <o-progress
-        size="medium"
-        :progress="range"
+      <o-progress-circle
+        :value="range"
+        :show="show"
       />
-      <o-progress
+      <o-progress-circle
+        size="medium"
+        :value="range"
+        :show="show"
+      />
+      <o-progress-circle
         size="large"
-        :progress="range"
+        :value="range"
+        :show="show"
       />
     </div>
 
-    <h2>Progress With Digits</h2>
-    <div class="flex align-center">
-      <o-progress
-        :progress="range"
-        digits
-      />
-      <o-progress
-        size="medium"
-        :progress="range"
-        digits
-      />
-      <o-progress
-        size="large"
-        :progress="range"
-        digits
-      />
-    </div>
     <div class="flex align-center">
       <input
         v-model="range"
@@ -67,6 +50,15 @@
         {{ range }}
       </code>
     </div>
+    <div class="flex align-center">
+      <label>
+        <input
+          v-model="show"
+          type="checkbox"
+        >
+        show
+      </label>
+    </div>
   </o-card>
 </template>
 
@@ -75,12 +67,13 @@
   lang="ts"
 >
 import {
-  OProgress,
+  OProgressCircle,
   OCard
 } from 'oreum-ui'
 import { ref } from 'vue'
 
 const range = ref(0.5)
+const show = ref(false)
 </script>
 
 <style lang="scss">

@@ -110,7 +110,8 @@ const components = [
   new ComponentUrl('Divider'),
   new ComponentUrl('Icon'),
   new ComponentUrl('InputText', 'input-text'),
-  new ComponentUrl('Progress'),
+  new ComponentUrl('ProgressBar', 'progress-bar'),
+  new ComponentUrl('ProgressCircle', 'progress-circle'),
 ]
 
 function clickOutside (event: Event) {
@@ -273,7 +274,7 @@ onUnmounted(() => removeEventListener('pointerup', clickOutside))
     width: 100%;
     background-color: var(--background-color);
     padding-inline: 8px;
-    z-index: 60;
+    z-index: 120;
     clip-path: inset(-2px 0 -32px 0);
 
     &::before {
