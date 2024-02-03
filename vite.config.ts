@@ -1,7 +1,6 @@
 import * as fs from 'fs'
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-
 import vuePlugin from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
 

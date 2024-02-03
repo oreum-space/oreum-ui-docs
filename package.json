@@ -9,10 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "oreum-ui": "link:../oreum-ui",
-    "vue": "^3.3.13"
-  },
-  "devDependencies": {
     "@types/node": "^20.10.5",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
@@ -22,10 +18,12 @@
     "@vue/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.19.2",
+    "oreum-ui": "link:../oreum-ui",
     "sass": "^1.69.5",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
     "vite-plugin-eslint": "^1.8.1",
+    "vue": "^3.3.13",
     "vue-router": "^4.2.5",
     "vue-tsc": "^1.8.26"
   }
