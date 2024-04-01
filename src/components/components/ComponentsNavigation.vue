@@ -174,9 +174,7 @@ onUnmounted(() => removeEventListener('pointerup', clickOutside))
   &__shadow {
     position: absolute;
     --min-left: 24px;
-    @media (max-width: 512px) {
-      --min-left: 16px;
-    }
+    @media (max-width: 512px) { --min-left: 16px }
     left: max(var(--min-left), (100vw - var(--app-width)) / 2 + 16px);
     width: calc(256px + 64px);
     @supports (width: 1dvh) { height: calc(100dvh - 48px) }
@@ -188,9 +186,12 @@ onUnmounted(() => removeEventListener('pointerup', clickOutside))
     pointer-events: none;
     box-shadow: inset 0 0 12px 12px var(--current-background-color);
 
-    clip-path: inset(0 48px 0 32px); // desktop
-    @supports (scrollbar-width: thin) { clip-path: inset(0 49px 0 32px) } // desktop firefox
-    @supports (-webkit-overflow-scrolling: touch) { clip-path: inset(0 40px 0 32px) }// mobile
+    // desktop
+    clip-path: inset(0 48px 0 32px);
+    // desktop firefox
+    @supports (scrollbar-width: thin) { clip-path: inset(0 49px 0 32px) }
+    // mobile
+    @supports (-webkit-overflow-scrolling: touch) { clip-path: inset(0 40px 0 32px) }
 
     @media (max-width: 1280px) {
       height: calc(100vh - #{48 + 32}px);

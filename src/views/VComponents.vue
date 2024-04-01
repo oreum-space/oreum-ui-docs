@@ -32,16 +32,14 @@ defineProps<{ class: string }>()
   display: flex;
   flex-flow: row nowrap;
 
-  section {
-    margin-inline: 256px;
-    padding-inline: 24px;
+  &__view {
+    padding-inline: 280px;
     width: 100%;
-    @media (max-width: 1280px) {
-      margin-inline: 256px 0;
-    }
+    @media (max-width: 1280px) { padding-inline: 280px 24px }
+    @media (max-width: 1024px) { padding-inline: 24px }
 
-    @media (max-width: 1024px) {
-      margin-inline: 0;
+    & > .o-card_clear {
+      padding: 24px 0;
     }
   }
 

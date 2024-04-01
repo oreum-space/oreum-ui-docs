@@ -35,6 +35,48 @@
     >
       Async with progress
     </o-button>
+    <!-- Disabled -->
+    <h2>
+      Disabled
+    </h2>
+    <o-button disabled>
+      Default
+    </o-button>
+    <o-button
+      primary
+      disabled
+    >
+      Primary
+    </o-button>
+    <o-button
+      type="text"
+      disabled
+    >
+      Text
+    </o-button>
+    <o-button
+      type="icon"
+      icon="default"
+      disabled
+    />
+    <o-button
+      primary
+      async
+      disabled
+      :progress="sending"
+      @click="send"
+    >
+      Async
+    </o-button>
+    <o-button
+      primary
+      async
+      disabled
+      :progress="progress"
+      @click="process"
+    >
+      Async with progress
+    </o-button>
   </o-card>
 </template>
 
