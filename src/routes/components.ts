@@ -63,6 +63,11 @@ export default <RouteRecordRaw>{
       path: 'progress-circle',
       name: name`ProgressCircle`,
       component: () => import('@/views/components/VComponentsProgressCircle.vue')
+    },
+    {
+      path: 'tab-menu',
+      name: name`TabMenu`,
+      component: () => import('@/views/components/VComponentsTabMenu.vue')
     }
   ]
 }

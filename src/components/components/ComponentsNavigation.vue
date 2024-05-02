@@ -112,6 +112,7 @@ const components = [
   new ComponentUrl('InputText', 'input-text'),
   new ComponentUrl('ProgressBar', 'progress-bar'),
   new ComponentUrl('ProgressCircle', 'progress-circle'),
+  new ComponentUrl('TabMenu', 'tab-menu'),
 ]
 
 function clickOutside (event: Event) {
