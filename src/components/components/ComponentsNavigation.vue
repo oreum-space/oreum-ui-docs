@@ -27,23 +27,7 @@
       </li>
     </ul>
   </aside>
-  <span class="components-sidebar__shadow" />
   <aside :class="['components-content', { 'components-content_opened': contentOpened }]">
-    Lorem<br>
-    Ipsum<br>
-    Dolor<br>
-    Sit amet<br>
-    Consectetur<br>
-    Adipisicing<br>
-    Elit Aliquid<br>
-    Animi<br>
-    Corporis<br>
-    Deserunt<br>
-    Dolore eaque eum<br>
-    Explicabo<br>
-    Magnam<br>
-    Quas<br>
-    Saepe
   </aside>
 </template>
 
@@ -58,7 +42,6 @@ import { onBeforeRouteUpdate } from 'vue-router'
 
 const sidebarOpened = ref(false)
 const contentOpened = ref(false)
-
 
 function toggleSidebar () {
   if (sidebarOpened.value) return closeSidebar()

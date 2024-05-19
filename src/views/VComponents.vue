@@ -38,8 +38,19 @@ defineProps<{ class: string }>()
     @media (max-width: 1280px) { padding-inline: 280px 24px }
     @media (max-width: 1024px) { padding-inline: 24px }
 
-    & > .o-card_clear {
-      padding: 24px 0;
+    .o-card_clear {
+      padding: 12px 0;
+    }
+
+    .o-card_content {
+      padding: 24px;
+    }
+
+    code {
+      display: block;
+      overflow: auto;
+      unicode-bidi: isolate;
+      white-space: pre;
     }
   }
 

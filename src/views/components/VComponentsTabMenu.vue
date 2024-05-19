@@ -1,6 +1,6 @@
 <template>
   <o-card clear>
-    <h1>TabMenu Test C</h1>
+    <h1>TabMenu</h1>
     <o-card>
       <o-tab-menu :tabs="tabs" />
     </o-card>
@@ -26,6 +26,12 @@ const tabs = [
   {
     label: 'Unavailable',
     disabled: true
+  },
+  {
+    label: 'Menu'
+  },
+  {
+    label: 'Tab'
   },
   {
     label: 'End'
