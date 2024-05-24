@@ -1,10 +1,16 @@
 <template>
-  <OCard class="c-code">
+  <OCard
+    :class="['c-code', { 'c-code_clear': clear }]"
+    :clear="clear"
+  >
     <highlightjs
       :language="lang === 'template' ? 'html' : lang"
       :code="code"
     />
-    <span class="c-code__lang">{{ lang }}</span>
+    <span
+      v-if="!clear"
+      class="c-code__lang"
+    >{{ lang }}</span>
   </OCard>
 </template>
 
@@ -13,7 +19,8 @@ import { OCard } from 'oreum-ui'
 
 defineProps<{
   code: string,
-  lang: string
+  lang: string,
+  clear?: boolean
 }>()
 </script>
 
@@ -35,6 +42,16 @@ defineProps<{
     top: -4px;
     color: var(--description-color);
     font-weight: bold;
+  }
+
+  &_clear.c-code {
+    padding: 0;
+
+    &.c-code,
+    pre,
+    code {
+      background-color: transparent;
+    }
   }
 }
 </style>
